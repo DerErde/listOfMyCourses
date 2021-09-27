@@ -1,8 +1,8 @@
-  ^~^  ,                   
- ('Y') )                   
- /   \/  DerErde  __QQ 
-(\|||/)              (_)_">
-                    /      
+
+                           ┌┴─┴─┴─┴─┴┐
+                           │ DerErde │
+                           └┬─┬─┬─┬─┬┘
+                
 =================================================================
 
 I am interested in python programming and machine learning.
@@ -21,12 +21,9 @@ Also, lectures and notes from the courses themselves.
 
 =================================================================
 
-Contact information.
-
-**E-mail**: [1024bit@pm.me](mailto:1024bit@pm.me "Mailing address to contact me")
-
-**My website**: [www.*.com](https://no-site) (add later) 
-
-**My linkedin**: [linkedin.com](https://linkedin.com/) (add later) 
+| Contact information. |
+| **E-mail**: | [[1024bit@pm.me](mailto:1024bit@pm.me "Mailing address to contact me")][PlDb] |
+| **My website**: | [www.*.com](https://no-site) (add later) [PlGh] |
+| **My linkedin**: | [linkedin.com](https://linkedin.com/) (add later) [PlGd] |
 
 =================================================================
