@@ -1,3 +1,8 @@
+  ^~^  ,                   
+ ('Y') )                   
+ /   \/  [DerErde]("meow")  __QQ 
+(\|||/)              (_)_">
+                    /      
 =================================================================
 
 I am interested in python programming and machine learning.
