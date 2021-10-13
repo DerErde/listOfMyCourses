@@ -1,2 +1,3 @@
 Test file for: testLocalGitRepl
 
+Two test.Add new line.
