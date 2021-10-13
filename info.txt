@@ -1,3 +1,4 @@
 Test file for: testLocalGitRepl
 
 Two test.Add new line.
+Three line. Added on this file. Test three.
