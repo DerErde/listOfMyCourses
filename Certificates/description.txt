@@ -1,1 +1,2 @@
-The 'doc' folder contains course certificates and other documents created during training.
+
+The 'Certificates' folder contains course certificates and other documents created during training.
