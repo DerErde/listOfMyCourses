@@ -1,0 +1,8 @@
+
+The "Python" folder contains pages (outlines) of python language.
+(in format .html)
+
+Each course is in a separate folder.
+(inside each course, there is a folder with the code)
+
+"Lecture materials, saved for reference only. All rights to the materials belong to their owners."
