@@ -1,0 +1,10 @@
+
+The "GitCourse" folder contains the git note. (in format .html)
+(material taken from the hexlet course.
+On the website: https://ru.hexlet.io/courses/intro_to_git )
+
+And.
+There is a copy of this course on the GitHub page - "Wiki".
+(link: https://github.com/DerErde/listOfMyCourses/wiki )
+
+"Lecture materials, saved for reference only. All rights to the materials belong to their owners."
