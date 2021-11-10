@@ -1,4 +1,14 @@
-Test file for: testLocalGitRepl
 
-Two test.Add new line.
-Three line. Added on this file. Test three.
+
+Welcome to the listOfMyCourses!
+
+This repository ( https://github.com/DerErde/listOfMyCourses/wiki ) 
+contains information about the courses I have taken.
+(A course in Git, Python, and more.)
+
+Also, lectures and notes from the courses themselves are saved in the "Wiki".
+
+The folders (inside this repository) contain a copy of the lectures and materials.
+The outlines were created in .html format.
+
+"Lecture materials, saved for reference only. All rights to the materials belong to their owners."
