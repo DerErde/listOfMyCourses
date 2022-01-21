@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="git course">
+    <meta name="author" content="hexlet.io">
+
+    <title>Git course - hexlet.io</title>
+
+  <!-- **************** Конспект курса по Git  **************** -->
+
+  </head>
+
+  
+	<div id="wrapper">
+	<hr>
+		<h1>Introduction to Git </h1>
+		<br>
+		<h3>What you will learn?</h3>
+		<br>
+		<p>Website:<a href="https://ru.hexlet.io/courses/intro_to_git" target="_blank">Hexlet.io</a></p>
+
+		<ul>
+		   <li>Lead development in accordance with current engineering practices</li>
+		   <li>Effectively manage source code, add to the shared repository, analyze history, and modify it</li>
+		   <li>Work with GitHub and contributing to open source projects</li>
+  		</ul>
+
+	<hr>
+
+
+
+	<h3>Course materials.</h3>
+
+	<h4>Рабочий процесс — Введение в Git</h4>
+
+	<p>Перед тем как погружаться в детали, пройдём поверхностно весь путь от создания проекта в git до начала
+		отслеживания изменений. Затем, в следующих уроках поговорим подробнее про все этапы. В процессе изучим большое
+		количество новых терминов и команд, которые нужны для понимания работы git.</p>
+
+	<p>Git может отслеживать файлы проекта только в том случае, когда они помещены под контроль версий. Для этого нужно
+		зайти в директорию проекта и выполнить команду инициализации <b>git init</b>. Проект может быть как новый, так и уже
+		существующий. Процесс инициализации от этого не поменяется.</p>
+
+	<code>	# Создаем новый проект
+			<br>$ mkdir hexlet-git
+			<br>$ cd hexlet-git
+			<br>
+			<br># Выполняем инициализацию
+			<br>hexlet-git$ git init
+			<br>Initialized empty Git repository in /private/tmp/hexlet-git/.git/
+	</code>
+
+	<p>Команда <b>git init</b> создает репозиторий — директорию .git, которая содержит все необходимые для работы git файлы.</p>
+
+	<p>С помощью команды <b>git status</b> можно посмотреть статус репозитория:</p>
+
+	<code>
+		hexlet-git$ git status
+		<br>On branch master
+		<br>No commits yet
+		<br>nothing to commit (create/copy files and use "git add" to track)
+	</code>
+
+		<p>В этом выводе указано, что репозиторий пустой (<i>No commits yet</i>) и в него нечего добавить,
+			так как нет новых или изменённых файлов.
+			<br>Давайте попробуем добавить несколько файлов:
+		</p>
+
+	<code>
+		# Создаем файл README.md со строкой текста
+		<br>hexlet-git$ echo 'Hello, Hexlet!' > README.md
+		<br>hexlet-git$ echo 'Haskell Curry' > PEOPLE.md
+	</code>
+
+	<p>Теперь снова смотрим на статус:</p>
+
+	<code>
+		hexlet-git$ git status
+		<br>
+		<br># Часть вывода убрана
+		<br>Untracked files:
+		<br>(use "git add <file>..." to include in what will be committed)
+		<br>PEOPLE.md
+		<br>README.md
+	</code>
+
+	<p>Git увидел, что в проекте появились новые файлы, о которых ему ничего не известно.
+		Они помечаются как <i>не отслеживаемые</i> (untracked files).
+		<br>Git не следит за изменениями в таких файлах,
+		так как они не добавлены в репозиторий. Добавление в репозиторий происходит в два шага.
+		<br>Первым шагом выполняется команда подготовки файлов <b>git add путь-до-файла</b>:
+	</p>
+
+	<code>
+		# Для каждого нового или измененного файла
+		<br>hexlet-git$ git add README.md
+	</code>
+
+	<p>Смотрим что произошло:</p>
+
+	<code>
+		hexlet-git$ git status
+		<br>Changes to be committed:
+		<br>(use "git rm --cached <file>..." to unstage)
+		<br>new file: README.md
+		<br>Untracked files:
+		<br>(use "git add <file>..." to include in what will be committed)
+		<br>PEOPLE.md
+	</code>
+
+	<p>
+		Файл README.md теперь находится в состоянии "готов к фиксации изменений" или, другими словами,
+		файлы попадают в индекс. Под фиксацией понимается окончательное добавление в репозиторий,
+		когда git запоминает файл навсегда и следит за всеми последующими изменениями.
+	</p>
+
+	<p>
+		Все изменения, готовые к фиксации, попадают в репозиторий с помощью коммита.
+		<br>Коммит — это операция, которая берёт все подготовленные изменения (они могут включать любое количество файлов)
+		и отправляет их в репозиторий как единое целое.
+		<br>Вот, как он выполняется:
+	</p>
+
+	<code>
+		hexlet-git$ git commit -m 'add README.md'
+		<br>[master (root-commit) 3c5d976] add README.md
+		<br>1 file changed, 1 insertion(+)
+		<br>create mode 100644 README.md
+	</code>
+
+	<p>
+		Флаг <b>-m</b> означает message, то есть описание коммита. коммит можно выполнять и без него,
+		но тогда откроется редактор, в котором нужно будет ввести описание коммита.
+		<br>Мы рекомендуем делать осмысленные описания — это хороший тон.
+		<br>Пример соглашения по именованию коммитов приведён в дополнительных материалов к уроку.
+	</p>
+
+	<p>
+		Может возникнуть вопрос: зачем так сложно, зачем отдельно нужен индекс
+		(куда попадают файлы после <b>git add</b>),
+		и почему нельзя добавлять все изменённые файлы сразу в коммит?
+		<br>Как ни странно, такой процесс создан как раз для удобства программистов.
+		<br>Дело в том, что во время разработки может меняться и добавляться много файлов.
+		<br>Но это не значит, что мы хотим добавить все эти изменения в один коммит.
+	</p>
+
+	<p>
+		Со смысловой точки зрения, коммит — это какое-то логически завершённое изменение внутри проекта.
+		<br>Его размер бывает очень маленьким, например, исправлением опечатки в одном файле, а иногда и большим,
+		например, при внедрении новой функциональности.
+		<br>Главное в коммите — его атомарность, то есть он должен выполнять ровно одну задачу.
+	</p>
+
+	<p>
+		Теперь файл README.md находится внутри репозитория.
+		<br>Убедиться в этом можно, запустив команду <b>git status</b>:
+	</p>
+
+	<code>
+		hexlet-git$ git status
+		<br>Untracked files:
+		<br>(use "git add <file>..." to include in what will be committed)
+		<br>PEOPLE.md
+	</code>
+
+	<p>
+		<b>git status</b> не выводит файлы, которые добавлены в репозиторий и не содержат изменений.
+		<br>При этом сам файл README.md находится внутри директории hexlet-git.
+	</p>
+
+
+	<hr> <!-- **************** Integration with Github  **************** -->
+
+	<h4> Интеграция с Github </h4>
+
+	<p>
+		На текущий момент у нас есть репозиторий с двумя коммитами.
+		<br>Содержимое директории hexlet-git выглядит так:
+	</p>
+
+	<code>
+		hexlet-git$ ls -a
+		<br>.git
+		<br>PEOPLE.md
+		<br>README.md
+	</code>
+
+	<p>
+		Перед тем, как продолжить экспериментировать, добавим наш репозиторий на github.com.
+		<br>Сохранённый репозиторий в любой момент можно извлечь и продолжить работу в нём с последнего
+		добавленного туда коммита.
+		<br>Это полезно на случай, если мы случайно удалим или изменим локальный репозиторий так,
+		что с ним станет невозможно работать.
+	</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+<!-- немного стилей -->
+<style type="text/css">
+
+	body {
+		background-color: #dddfe6;
+		font-size: 16px;}
+
+	p {color: #1c1e24;}
+	a {color: #3366CC;}
+
+
+	#wrapper {
+		width: 720px;
+  		margin: 0 auto;
+  		text-align: left;}
+
+	hr {
+		align: center;
+		width: 98%;
+		size: 2;
+		color: #990033;}
+
+	code {
+		color: #003399;
+		font-size: 14px;}
+
+</style>
+
+
+
+
+
+</html>
