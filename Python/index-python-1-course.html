@@ -2048,13 +2048,64 @@
 		<br>	print(i, 'нечётное')
 	</code>
 
+	<code>
+		# для заданного четырехзначного числа выполняется следующее соотношение:
+		<br># сумма первой и последней цифр равна разности второй и третьей цифр.
+		<br>num = int(input())
+		<br>
+		<br>d = num % 10
+		<br>c = (num % 100) // 10
+		<br>b = (num // 100) % 10
+		<br>a = num // 1000
+		<br>
+		<br>if a + d == b - c:
+		<br>	print('ДА')
+		<br>else:
+		<br>	print('НЕТ')
+	</code>
 
+	<code>
+		# Напишите программу, которая определяет, являются ли три заданных числа (в указанном порядке)
+		# последовательными членами арифметической прогрессии. 1 2 3
+		<br>a = int(input())
+		<br>b = int(input())
+		<br>c = int(input())
+		<br>
+		<br>if ((b - a) == (c - b)):
+		<br>	print('YES')
+		<br>else:
+		<br>	print('NO')
+	</code>
 
+		<p>или такой вариант:</p>
 
+	<code>
+		a, b, c = int(input()), int(input()), int(input())
+		<br>if b - a == c - b:
+		<br>	print('YES')
+		<br>else:
+		<br>	print('NO')
+	</code>
 
+	<code>
+		# Напишите программу, которая определяет наименьшее из четырёх чисел.
+		<br>a, b, c, d = int(input()), int(input()), int(input()), int(input())
+		<br>print(max(a, b, c, d))
+	</code>
 
-
-
+	<code>
+		# Напишите программу, которая по введённому возрасту пользователя сообщает,
+		<br># к какой возрастной группе он относится:
+		<br>a = int(input())
+		<br>if a <= 13:
+		<br>	print("детство")
+		<br>elif a <= 24:
+		<br>	print("молодость")
+		<br>elif a <= 59:
+		<br>	print("зрелость")
+		<br>elif a > 60:
+		<br>	print("старость")
+	</code>
 
 
 
