@@ -20,7 +20,7 @@ Also, lectures and notes from the courses themselves.
 |--------------|-----------|------------|
 | * | **E-mail**: | [1024bit@pm.me](mailto:1024bit@pm.me "Mailing address to contact me") |
 | * | **My website**: | [www.not-added](https://not-added) (add later) |
-| * | **My linkedin**: | [linkedin.com](https://linkedin.com/) (add later) |
+| * | **My linkedin**: | [linkedin.com](https://www.linkedin.com/in/aleksei-sokolov-e/) |
 
 =================================================================
   
